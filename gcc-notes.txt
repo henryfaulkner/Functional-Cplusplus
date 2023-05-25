@@ -1,0 +1,2 @@
+g++ -std=c++17 -o [executable] [C++ file] <- compile to C++17
+./[executable] <- run
