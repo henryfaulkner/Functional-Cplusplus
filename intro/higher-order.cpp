@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
 
 int main()
 {
@@ -17,4 +18,8 @@ std:
                  { return a % 2 == 0; });
     std::for_each(v1.begin(), v1.end(), [](int a)
                   { std::cout << a << std::endl; });
+    std::cout << "break" << std::endl;
+
+    int sum = std::accumulate(v1.begin(), v1.end(), 0);
+    std::cout << "Sum: " << sum << std::endl;
 }
