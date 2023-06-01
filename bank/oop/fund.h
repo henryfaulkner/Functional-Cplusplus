@@ -7,10 +7,13 @@
 class Fund
 {
 private:
+    int id;
+    std::string fundName;
+    std::string ownerName;
     double balance;
 
 public:
-    Fund(std::string fundName);
+    Fund(std::string fundName, std::string ownerName);
     double viewFund();
     void withdrawalFunds();
     void depositFunds();

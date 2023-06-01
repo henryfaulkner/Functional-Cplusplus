@@ -5,15 +5,17 @@
 #include <user.h>
 #include <request.h>
 
+/*
+    Assume the ATM is the system, rather than a solo machine
+    Save the abstraction
+*/
 class ATM
 {
 private:
     std::queue<Request> requests;
 
 public:
-    double viewFund();
-    void withdrawalFunds();
-    void depositFunds();
+    void pushRequest(Request request);
 };
 
 #endif

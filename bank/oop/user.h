@@ -15,7 +15,9 @@ private:
 public:
     User();
     User(std::string name);
+    std::string getName();
     void addFund(std::string name);
+    void joinFund(std::string fundName, std::string ownerName);
     void makeRequest(std::string fundKey, std::function<void()> callback);
 };
 
