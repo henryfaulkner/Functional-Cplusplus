@@ -10,6 +10,7 @@
 class Request
 {
 public:
+    Request();
     Request sendRequest(std::function<void()> callback);
 };
 

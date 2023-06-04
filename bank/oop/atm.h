@@ -11,10 +11,11 @@
 */
 class ATM
 {
-private:
-    std::queue<Request> requests;
-
 public:
+    std::map<std::string, Fund> funds;
+    std::queue<Request> requests;
+    Fund addFund(std::string name, User owner);
+    void joinFund(std::string fundName, User member);
     void pushRequest(Request request);
 };
 

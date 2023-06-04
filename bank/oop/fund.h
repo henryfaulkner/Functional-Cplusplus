@@ -2,21 +2,23 @@
 #define FUND_H
 
 #include <queue>
+#include <vector>
 #include <user.h>
 
 class Fund
 {
-private:
+public:
     int id;
     std::string fundName;
     std::string ownerName;
+    std::vector<User> members;
     double balance;
 
-public:
     Fund(std::string fundName, std::string ownerName);
     double viewFund();
-    void withdrawalFunds();
-    void depositFunds();
+    void withdrawalFunds(double amount, User interactor);
+    void depositFunds(double amount, User interactor);
+    void addMember(User member);
 };
 
 #endif

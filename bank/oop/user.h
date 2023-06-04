@@ -7,17 +7,13 @@
 
 class User
 {
-private:
+public:
     int id;
     std::string name;
-    std::map<std::string, Fund> funds;
+    double pockets;
 
-public:
     User();
     User(std::string name);
-    std::string getName();
-    void addFund(std::string name);
-    void joinFund(std::string fundName, std::string ownerName);
     void makeRequest(std::string fundKey, std::function<void()> callback);
 };
 
